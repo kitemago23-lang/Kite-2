@@ -1,0 +1,17 @@
+{
+  "name": "VENTO Kite School",
+  "short_name": "VENTO",
+  "description": "Aulas de kitesurf, disponibilidade e pré-reservas no Ceará.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F6EFDB",
+  "theme_color": "#EC5B24",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

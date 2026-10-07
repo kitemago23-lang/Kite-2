@@ -1,0 +1,103 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — VENTO (escola de kitesurf, Ceará)
+ * Paleta: areia + oceano + laranja vento. Todas as cores em oklch.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+  --radius-2xl: calc(var(--radius) + 14px);
+  --radius-3xl: calc(var(--radius) + 20px);
+
+  --font-display: "Anton", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-sans: "Space Grotesk", sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--card);
+  --color-popover-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: var(--primary);
+
+  --color-ink: var(--ink);
+  --color-deep: var(--deep);
+  --color-sea: var(--sea);
+  --color-sand: var(--sand);
+  --color-sand-2: var(--sand-2);
+  --color-wind: var(--wind);
+  --color-foam: var(--foam);
+}
+
+:root {
+  --radius: 1.25rem;
+
+  --ink: oklch(0.245 0.039 231);
+  --deep: oklch(0.348 0.062 232);
+  --sea: oklch(0.478 0.079 231);
+  --sand: oklch(0.938 0.032 91);
+  --sand-2: oklch(0.881 0.048 91);
+  --wind: oklch(0.676 0.207 37);
+  --foam: oklch(1 0 0);
+
+  --background: var(--sand);
+  --foreground: var(--ink);
+  --card: var(--foam);
+  --card-foreground: var(--ink);
+  --primary: var(--wind);
+  --primary-foreground: var(--foam);
+  --secondary: var(--sand-2);
+  --secondary-foreground: var(--ink);
+  --muted: var(--sand-2);
+  --muted-foreground: oklch(0.52 0.02 231);
+  --accent: var(--sea);
+  --accent-foreground: var(--foam);
+  --destructive: oklch(0.58 0.2 25);
+  --border: oklch(0.245 0.039 231 / 8%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility snap-strip {
+  scroll-snap-type: x mandatory;
+}
